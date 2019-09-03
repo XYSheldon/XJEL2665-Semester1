@@ -1,1 +1,10 @@
 *.mp4
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# for Mac OS X System Files
+.DS_Store
+Thumbs.db
