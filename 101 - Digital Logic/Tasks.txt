@@ -1,0 +1,36 @@
+Laboratory Activities
+ 
+Task 1
+Derive the NAND gate equivalents for the following gates:
+
+NOT
+AND
+OR
+XOR (both 4 and 5 gate versions)
+ 
+Task 2
+Implement the above gates in HDL using the supplied .hdl stub files. The only building block you can use is the built-in NAND gates and the composite gates that you will gradually build i.e. once you have built an AND gate from NAND gates, you can use the AND gate in further designs.
+
+Each of the gates exists as a built-in version. The simulator first checks the current directory for a version that you have built. For example, if the current directory contains And.hdl, the simulator will use your implementation (defined in And.hdl). If the current directory does not contain And.hdl, the simulator will use the built-in version of an AND gate.
+
+Test each of your implementations with the supplied .tst scripts using the Hardware Simulator.
+
+ 
+Task 3
+Design the following gates and implement in HDL, testing with the supplied .tst files:
+
+Not16
+And16
+Or16
+Or8Way
+Chapter 1 in the accompanying text book has a detailed API and implementation tips.
+
+ 
+Reflection
+Just stop for a moment and reflect on what has been covered this week. By combining transistors in a particular way, we can create a circuit that implements NAND logic. Then, by using some maths and basic logic from 1847, we can create other circuits that implement the primitive logic gates (AND, OR, NOT) and XOR using just NAND gates. Therefore, just using transistors, we can create circuits that implement all the main logic functions.
+
+We have also covered HDL. This is simply a scripting language that allows us to describe how a circuit is connected. It is basically an alternative to drawing a circuit on paper. When designing circuits, I still draw out the circuits in my logbook and then convert to HDL once I am (pretty) sure that they are correct. 
+
+Assignment
+101 Submission
+Create a .zip of your completed lab tasks and upload here to unlock next weeks resources.

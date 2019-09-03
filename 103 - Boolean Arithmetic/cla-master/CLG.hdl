@@ -1,0 +1,57 @@
+// Carry Lookahead Generator
+// Dr Craig A. Evans
+
+CHIP CLG {
+    IN a[4],b[4],c0;   
+    OUT c1,c2,c3,c4,gp,gg;      
+
+    PARTS:
+
+    And(a=a[0],b=b[0],out=g0); 
+	And(a=a[1],b=b[1],out=g1);
+	And(a=a[2],b=b[2],out=g2);
+	And(a=a[3],b=b[3],out=g3);
+
+    Or(a=a[0],b=b[0],out=p0); 
+	Or(a=a[1],b=b[1],out=p1);
+	Or(a=a[2],b=b[2],out=p2);
+	Or(a=a[3],b=b[3],out=p3);
+    
+    // C1
+    And(a=p0,b=c0,out=p0c0);
+    Or(a=p0c0,b=g0,out=c1,out=c1temp);
+
+    // C2
+    And(a=p1,b=c1temp,out=p1c1);
+    Or(a=p1c1,b=g1,out=c2,out=c2temp);
+
+     // C3
+    And(a=p2,b=c2temp,out=p2c2);
+    Or(a=p2c2,b=g2,out=c3,out=c3temp);
+
+     // C4
+    And(a=p3,b=c3temp,out=p3c3);
+    Or(a=p3c3,b=g3,out=c4);
+
+    // GP
+    And(a=p0,b=p1,out=p01);
+    And(a=p2,b=p3,out=p23);
+    And(a=p01,b=p23,out=gp);
+
+    // GG
+    And(a=g2,b=p3,out=g2p3);
+    Or(a=g3,b=g2p3,out=temp1);
+
+    And(a=g1,b=p3,out=g1p3);
+    And(a=g1p3,b=p2,out=g1p3p2);
+
+    And(a=g0,b=p3,out=g0p3);
+    And(a=p2,b=p1,out=p2p1);
+    And(a=g0p3,b=p2p1,out=g0p3p2p1);
+
+    Or(a=g1p3p2,b=g0p3p2p1,out=temp2);
+    Or(a=temp1,b=temp2,out=gg);
+    
+
+
+}

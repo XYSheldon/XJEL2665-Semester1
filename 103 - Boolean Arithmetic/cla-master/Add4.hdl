@@ -1,0 +1,26 @@
+// 4-bit Carry Lookahead Adder
+// Dr Craig A. Evans
+
+CHIP Add4 {
+    IN a[4],b[4],cin;   
+    OUT out[4],gp,gg;
+
+    PARTS:
+
+    // calculate the 4 carry bits and the group propagate
+    // and generate bits from the inputs
+    CLG(a=a,b=b,c0=cin,
+        c1=c1,c2=c2,c3=c3,c4=carry,gp=gp,gg=gg);
+
+    // Now calculate the sum bits using the carries
+    PFA(a=a[0],b=b[0],c=cin,
+        sum=out[0]);  // Bit 0
+    PFA(a=a[1],b=b[1],c=c1,
+        sum=out[1]);
+    PFA(a=a[2],b=b[2],c=c2,
+        sum=out[2]);
+    PFA(a=a[3],b=b[3],c=c3,
+        sum=out[3]);   // Bit 3
+
+            
+}

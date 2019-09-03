@@ -1,0 +1,36 @@
+ 
+Task 1
+Design the multiplexer and de-multiplexer circuits using Boolean algebra.
+
+ 
+Task 2
+Implement the following parts in HDL using the provided .hdl stub files. Test your implementations using the supplied .tst files.
+
+Mux
+DMux
+ 
+Task 3
+Extend the single Mux and DMux circuits to implement the following parts using the supplied .hdl stub files. Test your implementations using the supplied .tst files.
+
+Mux16
+Mux4Way16
+Mux8Way16
+DMux4Way
+DMux8Way
+ 
+Task 4
+Work out how many NAND gates are required to build a multiplexer.
+
+Now, draw out the circuit for a mulitplexer showing each of the NAND gates. Study the circuit and see if you can identify any places when two NAND gates are configured as NOT gates and are connected in series. This double-complement can be cancelled out and the two NAND gates removed. This is an example of circuit minimisation.
+
+How many NAND gates are actually required to build a multiplexer?
+
+ 
+Task 5
+Replace your Mux design with the minimised version using NAND gates only. Test your implementation using the supplied .tst file.
+
+ 
+Reflection
+Just stop for a moment and reflect on what has been covered this week. We have covered some ways to design more complex circuits by combining the basic logic gates together. Since all logic gates are built from NAND gates that are built from transistors, this also means that more complex combinational circuits are also just made from transistors.
+
+We have also seen how useful the principle of hierarchical design can be. Once we have our more complex circuits (multiplexer and de-multiplexer), we can then re-use and combine those to build even more complex circuits. Never forget that this pyramid of complexity is built on a base of transistors!

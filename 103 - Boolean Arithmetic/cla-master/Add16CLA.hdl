@@ -1,0 +1,34 @@
+CHIP Add16CLA {
+    IN a[16], b[16];
+    OUT out[16];
+
+    PARTS:
+
+    // These are 'dummy' 4-bit adders to calculate the group p and g bits
+    // This avoids a circle in the parts
+    Add4(a=a[0..3],b=b[0..3],cin=false,gp=p0,gg=g0);
+    Add4(a=a[4..7],b=b[4..7],cin=false,gp=p1,gg=g1);
+	Add4(a=a[8..11],b=b[8..11],cin=false,gp=p2,gg=g2);
+	Add4(a=a[12..15],b=b[12..15],cin=false,gp=p3,gg=g3);
+
+    // Can now generate the group carries using the CLA logic
+    // C1
+    And(a=p0,b=false,out=p0c0);
+    Or(a=p0c0,b=g0,out=c1,out=c1temp);
+    // C2
+    And(a=p1,b=c1temp,out=p1c1);
+    Or(a=p1c1,b=g1,out=c2,out=c2temp);
+     // C3
+    And(a=p2,b=c2temp,out=p2c2);
+    Or(a=p2c2,b=g2,out=c3,out=c3temp);
+     // C4
+    And(a=p3,b=c3temp,out=p3c3);
+    Or(a=p3c3,b=g3,out=c4);
+
+    // Now we have the carries, we can use the 'real' adders to get the sum
+    Add4(a=a[0..3],b=b[0..3],cin=false,out=out[0..3]);
+    Add4(a=a[4..7],b=b[4..7],cin=c1,out=out[4..7]);
+	Add4(a=a[8..11],b=b[8..11],cin=c2,out=out[8..11]);
+	Add4(a=a[12..15],b=b[12..15],cin=c3,out=out[12..15]);
+
+}
