@@ -4,7 +4,7 @@
 #### 同时也是面向 “From nand to tetris” 的解答
 ----
 ### DO NOT DIRECTLY COPY SOLUTIONS!
-### Copy solutions have no contribution to your learning path.
+### Copying solutions have no contribution to your learning path.
 #### *请不要直接从本仓库拷贝解答，这对于你的学习进程没有帮助。*
 ---
 
