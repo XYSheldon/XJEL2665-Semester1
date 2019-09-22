@@ -1,0 +1,34 @@
+Note
+Note that the supplied files are in two sub-directories 'a' and 'b'. This is done to aid the simulator. If all of the parts were in one directory, when simulating the top-level RAM chip, it would have to load each of the many parts lower down the memory hierarchy. This can cause the simulator to run very slowly, or even run out of memory and crash.
+
+Separating the files goes some way to alleviating this. When running the files in 'b', the simulator will be forced to use the built-in versions of the chip parts whose .hdl implementations are stored in 'a'.
+
+
+Task 1
+Implement the following parts in HDL using the provided .hdl stub files. Test your implementations using the supplied .tst files.
+
+Bit
+Register
+The D flip-flop (DFF) is considered primitive (like the NAND gate) and so you do not have to build it.
+
+
+Task 2
+Implement the following parts in HDL using the provided .hdl stub files. Test your implementations using the supplied .tst files.
+
+RAM8
+RAM64
+RAM512
+RAM4K
+RAM16K
+
+Task 3
+Implement the following parts in HDL using the provided .hdl stub files. Test your implementations using the supplied .tst files.
+
+Program Counter (PC)
+
+Reflection
+Just stop for a moment and reflect on what has been covered this week. We have now moved onto sequential circuits. These are still digital circuits built from the foundation of transistors (D flip-flops are also implemented with NAND gates), but now we introduce the concept of time. Now that the circuits behaviour depends on time, it gives rise to memory as the circuits now 'remember' what their output was in the last time step.
+
+By designing circuits in different ways, we can get them to store large amounts of data and do things like counting.
+
+It is also worth reflecting again on the concept of hierarchical design. By building and combining ever-bigger blocks of memory, we can rapidly create larger and larger memories with very little effort. Imagine trying to build a 16K block of RAM out of single bits!

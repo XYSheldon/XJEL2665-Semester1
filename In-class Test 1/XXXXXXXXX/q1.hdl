@@ -1,0 +1,13 @@
+// DO NOT RENAME INPUTS OR OUTPUTS
+CHIP q1 {
+  IN a,b,c;
+  OUT out;
+  
+  PARTS:
+// ADD YOUR CODE BELOW
+
+  Xor(a=b, b=c, out=xorOut);
+  Not(in=c, out=notOut);
+  Mux(a=a, b=xorOut, sel=notOut, out=muxOut);
+  Or(a=muxOut, b=notOut, out=out);
+}
