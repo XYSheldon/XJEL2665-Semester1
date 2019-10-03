@@ -13,9 +13,7 @@
 - [x] S1-101
 - [x] S1-102
 - [x] S1-103
-    - [x] 1
-    - [x] 2
-    - [x] 3
+- [x] S1-104
     
 版权归属 Copyright:
 © 2017 Shimon Schocken and Noam Nisan
