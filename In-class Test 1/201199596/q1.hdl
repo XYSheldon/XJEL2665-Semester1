@@ -1,0 +1,13 @@
+CHIP q1{
+    IN
+    a,b,c;
+    OUT
+    out;
+
+    PARTS:
+
+    Mux(a=a, b=xor1, sel=notc, out=orin1);
+    Xor(a=b, b=c, out=xor1);
+    Not(in=c, out=notc);
+    Or(a=orin1, b=notc, out=out);
+}
