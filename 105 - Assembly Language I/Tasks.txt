@@ -1,0 +1,36 @@
+Task 1
+Run some of the examples from the screencasts to familiarise yourself with the CPU Emulator.
+
+
+Task 2
+Write code in the Hack assembly language to calculate 35 + 56 and store the result in RAM[5].
+
+Answer = 91
+
+
+Task 3
+Write code in the Hack assembly language to calculate 634 - 84 and store the result in RAM[2].
+
+Answer = 550
+
+
+Task 4
+Write code in the Hack assembly language to calculate 15 | 240 and store the results in RAM[7] (| is bit-wise OR).
+
+Answer = 255
+
+
+Task 5
+Write code in the Hack assembly language to calculate 60 & !16 and stores the results in RAM[7] (& is bit-wise AND and ! is bit-wise negation).
+
+Answer not supplied as needed in the post-lab quiz
+
+
+Task 6
+Come up with some of your own examples to test out some of the Hack instruction set!
+
+
+Reflection
+Just stop for a moment and reflect on what has been covered this week. We've taken a slight detour and moved onto the software side of things. We know from previous weeks that the hardware circuits are built upon a foundation of transistors and fundamentally work on the principles of 'on' and 'off' or 0's and 1's. In order to program computers to do useful things, we need to give them instructions. Assembly language is a very low-level way of giving those instructions to the computer.
+
+We have also had a brief glimpse into the hardware architecture of the Hack computer. You will fully build this later in the course and for now can simply think of it as another rung up the pyramid of complexity that is founded upon very simple transistors.
