@@ -1,0 +1,11 @@
+// DO NOT RENAME INPUTS OR OUTPUTS
+CHIP q3 {
+  IN in[8];
+  OUT out[8];
+  
+  PARTS:
+  // ADD YOUR CODE BELOW
+  Not16(in[0..7]=in, out[0..7]=notin);
+  Inc16(in[0..7]=notin, out[0..7]=out);
+
+}

@@ -1,0 +1,14 @@
+// DO NOT RENAME INPUTS OR OUTPUTS
+CHIP q1 {
+  IN a,b,c;
+  OUT out;
+  
+  PARTS:
+  // ADD YOUR CODE BELOW
+
+  Not(in=b, out=notb);
+  And(a=a, b=b, out=ab);
+  And(a=ab, b=c, out=abc);
+  Or(a=abc, b=notb, out=out);
+  
+  }

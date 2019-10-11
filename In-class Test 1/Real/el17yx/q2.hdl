@@ -1,0 +1,27 @@
+// DO NOT RENAME INPUTS OR OUTPUTS
+CHIP q2 {
+  IN a[8],b[8];
+  OUT out;
+  
+  PARTS:
+  // ADD YOUR CODE BELOW
+  Xor(a=a[0], b=b[0], out=o0);
+  Xor(a=a[1], b=b[1], out=o1);
+  Xor(a=a[2], b=b[2], out=o2);
+  Xor(a=a[3], b=b[3], out=o3);
+  Xor(a=a[4], b=b[4], out=o4);
+  Xor(a=a[5], b=b[5], out=o5);
+  Xor(a=a[6], b=b[6], out=o6);
+  Xor(a=a[7], b=b[7], out=o7);
+
+  Or(a=o0, b=o1, out=or1);
+  Or(a=o2, b=o3, out=or2);
+  Or(a=o4, b=o5, out=or3);
+  Or(a=o6, b=o7, out=or4);
+  
+  Or(a=or1, b=or2, out=orr1);
+  Or(a=or3, b=or4, out=orr2);
+
+  Or(a=orr1, b=orr2, out=orrr);
+  Not(in=orrr, out=out);
+}
