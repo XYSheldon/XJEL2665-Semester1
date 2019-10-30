@@ -1,0 +1,35 @@
+ 
+Task 1
+Implement the Mult.asm program. This program takes the values stored in registers R0 and R1, computes the product as stores the result in R2.
+
+Use the Hack Assembler to convert your Mult.asm file to the Mult.hack machine code file.
+
+Load the Mult.tst file in the CPU Emulator. This will load the Mult.hack program and execute it, testing that it works as expected.
+
+You can also test your code manually by loading values into R0 and R1 and then running the clock.
+
+ 
+Task 2
+Complete the Fill.asm example. The program runs in an infinite loop that polls the keyboard input. If a key is pressed, the screen should fill black i.e. every pixel is turned on. When no is pressed, the screen should be cleared i.e. every pixel turned off. 
+
+The supplied Fill.tst script loads the .hack file and reminds you to turn off animations. You can then test the code interactively by pressing and releasing some keyboard keys. 
+
+The supplied FillAutomatic.tst script (together with the .cmp file) tests the code automatically.
+
+It is recommended that you test using both approaches.
+
+Hint: -1 in binary is 1111 1111 1111 1111.
+
+ 
+Task 3
+Load the supplied Pong.asm file into the CPU Emulator. If you turn off animations and run the code, you should be able to play Pong using the left and right arrow keys!
+
+Look at the assembler code, there are ~27500 instructions! This wasn't actually written by hand. The second part of the nand2tetris course (not a part of this module) deals with high-level languages (a language called Jack is developed), virtual machines, operating systems and compilers. The actual Pong game was created in Jack (about 300 lines) and the compiler developed during that part of the course was used to compile it to Hack assembly language.
+
+ 
+Reflection
+This week we've covered some more complex topics related to assembly programming and computers.
+
+First, consider variables. They are nothing special, they are just labels we use for naming slots in memory which makes them easier to remember and use than numbers!
+
+Next branches and loops. These constructs really power high-level languages and let us write programs that do very complicated things. But at the bottom level, they are based on loading numbers in a counter! In 'normal' circumstances, a computer will execute instructions in turn, 0, 1, 2, 3, 4, again, simply powered by a counter. To make while loops or if statements, we simply need to jump to other instructions which is just a case of loading a new value into a counter!
