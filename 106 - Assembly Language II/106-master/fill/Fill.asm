@@ -12,3 +12,49 @@
 // the screen should remain fully clear as long as no key is pressed.
 
 // Put your code here.
+(DLOOP)
+    @i
+    M=0
+    @KBD
+    D=M
+    @BLACK
+    D;JGT
+    (WHITE)
+
+        @i
+        D=M
+        @16384
+        A=D+A
+        M=0
+
+        @i
+        M=M+1
+        D=M
+        @8192
+        D=D-A
+        @WHITE
+        D;JLT
+
+    @DLOOP
+    0;JMP
+
+    (BLACK)
+
+        @i
+        D=M
+        @16384
+        A=D+A
+        M=-1
+
+        @i
+        M=M+1
+        D=M
+        @8192
+        D=D-A
+        @BLACK
+        D;JLT
+
+    @DLOOP
+    0;JMP
+    
+(CONT)
