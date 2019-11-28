@@ -1,0 +1,46 @@
+Task 1
+Build the following chip part and test using the supplied .tst files.
+
+Memory.hdl
+This part represents the entire RAM address space and contains three parts: RAM16K, Screen and Keyboard. You should use the built-in version of the RAM16K chip, rather than the one you built yourself, as the built-in version provides a GUI that makes de-bugging easier.
+
+ 
+Task 2
+Build the following chip part and test using the supplied .tst files.
+
+CPU.hdl
+This part can be constructed according to the proposed CPU implementation given in Figure 5.9 of Chapter 5, using the ALU and register chips built earlier in the course. However, you should use the built-in versions of the chips, especially ARegister and DRegister. These built-in versions have an additional GUI that comes in handy for testing.
+
+For the instruction memory, use the built in ROM32K chip.
+
+ 
+Task 3
+Build the following chip part.
+
+Computer.hdl
+This can be constructed according to the proposed implementation in Figure 5.10 in Chapter 5 of the book.
+
+ 
+Task 4
+To test the the final computer, you should execute some sample programs written in Hack machine language.
+
+There are three supplied tests:
+
+Add
+Max
+Rect
+Add adds together 2 and 3 and writes the result in RAM[0]. Test using ComputerAdd.test.
+
+Max computes the maximum of RAM[0] and RAM[1] and writes the result in RAM[2]. Test using ComputerMax.tst.
+
+Rect draws a rectangle of width 16 pixels and length RAM[0] at the top-left corner of the screen. Test using ComputerRect.tst.
+
+ 
+Reflection
+Now is a moment to reflect on what you have achieved over the last few weeks of this module. Starting from primitive NAND gates (i.e. transistors), you have, from the ground up, designed and implemented a working computer!
+
+Hopefully this has been a transformative journey that has forever changed your understanding and appreciation of computers and microprocessors.
+
+Well done!
+
+The next lab is the final step on this journey and you will learn how to translate the Hack assembly intructions into binary machine code.

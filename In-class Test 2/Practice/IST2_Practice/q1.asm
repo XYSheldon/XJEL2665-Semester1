@@ -4,3 +4,9 @@
 // i.e RAM[2] = RAM[0] + RAM[1]
 
 // Put your code below:
+@R0
+D=M
+@R1
+D=M+D
+@R2
+M=D

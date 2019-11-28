@@ -1,0 +1,28 @@
+Task 1
+Manually translate the Add.asm to binary machine code and type it into a file named MyAdd.hack.
+
+Launch the Assembler. Load the Add.asm source file and then load the MyAdd.hack comparison file. Run the fast translation to convert the .asm file to binary machine code. You will then get a message to say whether the comparison with your manually assembled file has been successful.
+
+ 
+Task 2
+Repeat the process with the MaxL.asm file. The L suffix denotes that it does not contain symbols.
+
+ 
+Task 3
+Now repeat the process with the Max.asm file. This version does contain symbols.
+
+ 
+Task 4
+Repeat tasks 2 and 3 for the Rect examples.
+
+ 
+Task 5
+Starting from Add.hack file, see if you can do the assembly process in reverse (i.e. dis-assembly) and works backwards to get the Hack assembly language from the binary machine code. Note this process is only possible for examples without symbols.
+
+ 
+Reflection
+This week has been the final step on our journey and we now know how to convert the human-friendly assembly language commands into the binary machine code instructions that are understood by the hardware and power the computer. Hopefully you have been surprised just how simple this process this is!
+
+The next step up from this is the compiler. This takes our C++ code and converts it into assembly instructions for the particular architecture. If you are interested in continuing this journey into the software-side, you may be interested in  this course on Coursera.
+
+Now, you just need to complete the post-lab quiz to complete Part I of the module and unlock the resources to Part II!
